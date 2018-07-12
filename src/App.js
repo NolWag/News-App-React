@@ -33,7 +33,7 @@ class App extends Component {
       <div className="App container">
         <div className="row">
         {
-          this.state.news.map((article) => <Article img={article.urlToImage} title={article.title}/>)
+          this.state.news.map((article) => <Article img={article.urlToImage} title={article.title} author={article.source.name} link={article.url}/>)
         }
         </div>
       </div>

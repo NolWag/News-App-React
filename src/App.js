@@ -16,7 +16,15 @@ class App extends Component {
     axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=692a5231f2854ebd9c4044caaee0d528')
       .then(res => {
         const news = res.data.articles;
-        this.setState({ news });
+        console.log(news)
+        const newArray = [];
+        news.map(article => {
+          if(article.urlToImage !== null) {
+            newArray.push(article);
+            console.log(newArray)
+          }
+        })
+        this.setState({ news : newArray });
       })
   }
 

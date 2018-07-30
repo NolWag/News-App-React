@@ -8,14 +8,20 @@ class Article extends React.Component {
 
   render() {
     return(
-      <div className="col-4">
+      <div className="col-sm-4">
         <div className="card">
           <img className="card-img-top imgHeight" src={this.props.img} />
           <p className="card-text heightRes">{this.props.title}</p>
           <p className="card-text">{this.props.author}</p>
-          <a target="_blank" href={this.props.link}>
-          <button className="btn-primary">View</button>
+          <div className="btn-group justify-content-center">
+            <a target="_blank" href={this.props.link}>
+            <button className="btn-primary">View</button>
+          </a>
+          <a target="_blank" href="#">
+          <button className="btn-primary">{this.props.author}</button>
         </a>
+          </div>
+
         </div>
       </div>
     )
